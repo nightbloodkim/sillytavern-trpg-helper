@@ -1,0 +1,301 @@
+/* TRPG跑团助手 - 样式文件 */
+
+/* ==================== 主面板 ==================== */
+.trpg-panel {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 280px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px solid #4a4a6a;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+/*==================== 头部 ==================== */
+.trpg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: linear-gradient(90deg, #4a1a6b 0%, #2d1b4e 100%);
+    border-bottom: 1px solid #6a4a8a;
+    cursor: move;
+}
+
+.trpg-header span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.trpg-toggle {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.trpg-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== 内容区 ==================== */
+.trpg-content {
+    padding: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/*滚动条样式 */
+.trpg-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.trpg-content::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+.trpg-content::-webkit-scrollbar-thumb {
+    background: #4a4a6a;
+    border-radius: 3px;
+}
+
+.trpg-content::-webkit-scrollbar-thumb:hover {
+    background: #6a6a8a;
+}
+
+/* ==================== 区块 ==================== */
+.trpg-section {
+    margin-bottom: 15px;
+}
+
+.trpg-section label {
+    display: block;
+    font-size: 12px;
+    color: #a0a0c0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*==================== 下拉选择 ==================== */
+.trpg-section select {
+    width: 100%;
+    padding: 8px12px;
+    background: #2a2a4e;
+    border: 1px solid #4a4a6a;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.trpg-section select:hover {
+    border-color: #8a6aaa;
+}
+
+.trpg-section select:focus {
+    outline: none;
+    border-color: #a080c0;
+}
+
+/* ==================== 骰子按钮组 ==================== */
+.trpg-dice-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.trpg-dice {
+    padding: 10px 5px;
+    background: linear-gradient(135deg, #3a2a5e 0%, #2a1a4e 100%);
+    border: 1px solid #5a4a7a;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.trpg-dice:hover {
+    background: linear-gradient(135deg, #5a3a8e 0%, #4a2a7e 100%);
+    border-color: #8a6aaa;
+    transform: translateY(-2px);box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.trpg-dice:active {
+    transform: translateY(0);
+}
+
+/* ==================== 自定义骰子输入 ==================== */
+.trpg-custom-roll {
+    display: flex;
+    gap: 8px;
+}
+
+.trpg-custom-roll input {
+    flex: 1;
+    padding: 8px 12px;
+    background: #2a2a4e;
+    border: 1px solid #4a4a6a;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 13px;
+}
+
+.trpg-custom-roll input:focus {
+    outline: none;
+    border-color: #a080c0;
+}
+
+.trpg-custom-roll input::placeholder {
+    color: #6a6a8a;
+}
+
+.trpg-custom-roll button {
+    padding: 8px 15px;
+    background: linear-gradient(135deg, #6a3a9e 0%, #4a2a7e 100%);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.trpg-custom-roll button:hover {
+    background: linear-gradient(135deg, #8a4abe 0%, #6a3a9e 100%);
+}
+
+/* ==================== 功能按钮组 ==================== */
+.trpg-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.trpg-buttons button {
+    flex: 1;
+    min-width: calc(50% - 4px);
+    padding: 10px 8px;
+    background: linear-gradient(135deg, #2a4a6e 0%, #1a3a5e 100%);
+    border: 1px solid #3a5a7a;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.trpg-buttons button:hover {
+    background: linear-gradient(135deg, #3a6a9e 0%, #2a5a8e 100%);
+    border-color: #5a8aba;
+}
+
+/* ==================== 结果显示区 ==================== */
+.trpg-result {
+    min-height: 60px;
+    padding: 12px;
+    background: #0a0a1e;
+    border: 1px solid #2a2a4e;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.trpg-result:empty::before {
+    content: "结果将显示在这里...";
+    color: #4a4a6a;
+    font-style: italic;
+}
+
+/* ==================== 动画效果 ==================== */
+@keyframes dice-roll {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.trpg-dice:active {
+    animation: dice-roll 0.3s ease;
+}
+
+@keyframes result-flash {
+    0% { background: #0a0a1e; }
+    50% { background: #1a2a4e; }
+    100% { background: #0a0a1e; }
+}
+
+.trpg-result.flash {
+    animation: result-flash 0.5s ease;
+}
+
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 768px) {
+    .trpg-panel {
+        width: 260px;
+        right: 5px;
+        top: 40px;
+    }
+    
+    .trpg-dice-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .trpg-buttons button {
+        font-size: 10px;padding: 8px 5px;
+    }
+}
+
+/* ==================== 深色主题适配 ==================== */
+.trpg-panel.dark-theme {
+    background: linear-gradient(135deg, #0a0a1e 0%, #0a1020 100%);
+    border-color: #2a2a4a;
+}
+
+/* ==================== 特殊效果 ==================== */
+
+/* 大成功效果 */
+.critical-success {
+    color: #ffd700 !important;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* 大失败效果 */
+.critical-failure {
+    color: #ff4444 !important;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+/* HP条颜色 */
+.hp-high { color: #44ff44; }
+.hp-medium { color: #ffaa00; }
+.hp-low { color: #ff4444; }
+
+/* ==================== 战斗状态指示 ==================== */
+.combat-active {
+    border-color: #ff6b6b !important;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+}
+
+.current-turn {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 3px solid #ffd700;
+}
