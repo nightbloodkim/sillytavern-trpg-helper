@@ -1,0 +1,11 @@
+{"display_name": "TRPG跑团助手",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "TRPG Helper",
+    "version": "1.0.0",
+    "homePage": "https://github.com/nightbloodkim/sillytavern-trpg-helper",
+    "auto_update": true
+}
